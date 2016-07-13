@@ -5,9 +5,10 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<nav class="navbar navbar-default navbar-static-top" role="navigation">
+<nav class="navbar navbar-default navbar-static-top" role="navigation" id="navbar-top">
   <div class='container'>
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-collapse">
@@ -20,8 +21,8 @@
     </div>
     <div class="collapse navbar-collapse" id="main-nav-collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Over ons", about_path %></li>
-        <li><%= link_to "Contact", new_contact_path %></li>
+        <li id='navbar-button'><%= link_to "Over ons", overons_path %></li>
+        <li id='navbar-button'><%= link_to "Contact", new_contact_path %></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div>
@@ -33,6 +34,14 @@
   <% end %>
   <%= yield %>
 </div>
+
+<footer class="footer" id="footer">
+  <div class="container">
+    <p class="text-center">
+      Whut
+    </p>
+  </div>
+</footer>
 
 </body>
 </html>
