@@ -18,3 +18,18 @@
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+
+.affix {
+    top: 0;
+    width: 100%;
+}
+
+.affix + .container-fluid {
+    padding-top: 70px;
+}
+
+header {
+    background-color:#F44336;
+    color:#fff;
+    height:150px;
+}
