@@ -1,0 +1,52 @@
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+    <div class="well">
+      <%= form_for @offerte do |f| %>
+        <div class="form-group">
+          <%= f.label :'Aanhef' %><br />
+          <%= f.label :gender, "Man", :value => 'male' %>
+          <%= f.radio_button :gender, true, :checked => true %>
+          <%= f.label :gender, "Vrouw", :value => 'female' %>
+          <%= f.radio_button :gender, false %>
+        </div>
+        <div class="form-group">
+          <%= f.label :'Voorletter(s)' %>
+          <%= f.text_field :initials, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :'Naam' %>
+          <%= f.text_field :lastname, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :'Adres' %>
+          <%= f.text_field :adres, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :'Postcode' %>
+          <%= f.text_field :zipcode, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :'Woonplaats' %>
+          <%= f.text_field :city, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :'Telefoonnummer' %>
+          <%= f.text_field :telnum, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :'Emailadres' %>
+          <%= f.text_field :email, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :'Onderwerp' %>
+          <%= f.text_field :subject, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :'Bericht' %>
+          <%= f.text_area :message, class: 'form-control textbox' %>
+        </div>        
+        <%= f.submit 'Vraag offerte aan!', class: 'btn btn-default' %>
+      <% end %>
+    </div>
+  </div>
+</div>

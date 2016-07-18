@@ -19,6 +19,7 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+//AFFIX TOOLBAR
 .affix {
     top: 0;
     width: 100%;
@@ -28,8 +29,107 @@
     padding-top: 70px;
 }
 
-header {
-    background-color:#F44336;
+.header {
+    padding-left:0px;
+    padding-right:0px;
     color:#fff;
-    height:150px;
+    height:200px;
+}
+//END OF AFFIX TOOLBAR
+
+//NAVBAR BUTTONS
+#navbar-button, .navbar-brand {
+    width:10em;
+}
+//END OF NAVBAR BUTTONS
+
+//BACKGROUND
+body {
+    position:relative;
+    background: #2BC0E4; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #2BC0E4 , #EAECC6); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #2BC0E4 , #EAECC6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ 
+}
+//END OF BACKGROUND
+
+//BOOTSTRAP NAVBAR ADJUSTMENT TWBSColor
+.navbar-default {
+  background-color: #23bae5;
+  border-color: #23bae5;
+  margin-bottom: 0px;
+}
+.navbar-default .navbar-brand {
+  color: #ffffff;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #000000;
+}
+.navbar-default .navbar-text {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #000000;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #000000;
+  background-color: #23bae5;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #000000;
+  background-color: #23bae5;
+}
+.navbar-default .navbar-toggle {
+  border-color: #23bae5;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #23bae5;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+button.navbar-toggle.collapsed {
+  border: 1px solid #ffffff;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #ffffff;
+}
+.navbar-default .navbar-link {
+  color: #ffffff;
+}
+.navbar-default .navbar-link:hover {
+  color: #000000;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #ffffff;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #000000;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #000000;
+    background-color: #23bae5;
+  }
+}
+// END OF NAVBAR ADJUSTMENT
+
+// TEXTBOX FORM CONTROL
+.textbox {
+  resize:none;
 }

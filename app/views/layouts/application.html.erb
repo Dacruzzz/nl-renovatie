@@ -3,29 +3,30 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>NL-Renovatie</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body data-spy="scroll" data-target="nav" data-offset="50">
   
-<header class="container-fluid">
-  <h1>Bootstrap Affix Example</h1>
-  <h3>Fixed (sticky) navbar on scroll</h3>
-  <p>Scroll this page to see how the navbar behaves with data-spy="affix".</p>
-</header>
+<div class="container-fluid header">
+  <!--<div class="stenenman">
+    <%= image_tag('stenenman.jpg') %>
+  </div>-->
+    <%= image_tag(('bannerexample.png'), class: 'img-responsive') %>
+</div>
 
-<nav class="navbar navbar-inverse navbar-static-top" role="navigation" data-spy="affix" data-offset-top="147">
+<nav class="navbar navbar-default navbar-static-top" role="navigation" data-spy="affix" data-offset-top="197">
   <div class='container-fluid'>
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-collapse">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav-collapse">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to root_path, class: 'navbar-brand' do %>
-          <i class="fa fa-home fa-lg"aria-hidden="true"></i>
+      <%= link_to root_path, class: 'navbar-brand' do %> 
+          <i class="fa fa-home fa-lg" aria-hidden="true"></i>
           Home
       <% end %>
     </div>
@@ -37,6 +38,18 @@
             Over Ons
           <% end %>
         </li>
+        <li id='navbar-button'>
+          <%= link_to projecten_path do %>
+            <i class="fa fa-suitcase" aria-hidden="true"></i>
+            Projecten
+          <% end %>
+        </li>
+        <li id='navbar-button'>
+          <%= link_to new_offerte_path do %>
+            <i class="fa fa-file-text-o" aria-hidden="true"></i>
+            Offerte
+          <% end %>
+        </li>    
         <li id='navbar-button'>
           <%= link_to new_contact_path do %>
             <i class="fa fa-envelope" aria-hidden="true"></i>
