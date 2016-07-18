@@ -1,9 +1,9 @@
 class Offerte < ActiveRecord::Base
     
     validates :gender, presence: true
-    validates :intials, presence: true
+    validates :initials, presence: true
     validates :lastname, presence: true
-    validates :address, presence: true
+    validates :adres, presence: true
     validates :zipcode, presence: true
     validates :city, presence: true
     validates :telnum, presence: true

@@ -7,10 +7,11 @@
     <p>Gegevens afzender:</p><br>
     <p>Adresgegevens:</p>
     <p>
-        <% if @gender == male do %>
+        <% if @gender == 'male' %>
             Meneer <%= "#{ @initials }, #{ @lastname }" %>
         <% else %>
             Mevrouw <%= "#{ @initials }, #{ @lastname }" %>
+        <% end %>
     </p>
     <p><%= @adres %></p>
     <p><%= @zipcode %></p>
