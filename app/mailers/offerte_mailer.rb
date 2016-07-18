@@ -4,7 +4,7 @@ class OfferteMailer < ActionMailer::Base
     @gender = gender
     @initials = initials
     @lastname = lastname
-    @adress = adres
+    @adres = adres
     @zipcode = zipcode
     @city = city
     @telnum = telnum
