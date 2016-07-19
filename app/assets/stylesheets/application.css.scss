@@ -21,35 +21,34 @@
 
 //AFFIX TOOLBAR
 .affix {
-    top: 0;
-    width: 100%;
+  top: 0;
+  width: 100%;
 }
 
 .affix + .container-fluid {
-    padding-top: 70px;
+  padding-top: 70px;
 }
 
 .header {
-    padding-left:0px;
-    padding-right:0px;
-    color:#fff;
-    height:200px;
+  padding-left:0px;
+  padding-right:0px;
+  color:#fff;
+  height:200px;
 }
 //END OF AFFIX TOOLBAR
 
 //NAVBAR BUTTONS
 #navbar-button, .navbar-brand {
-    width:10em;
+  width:10em;
 }
 //END OF NAVBAR BUTTONS
 
 //BACKGROUND
 body {
-    position:relative;
-    background: #2BC0E4; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #2BC0E4 , #EAECC6); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #2BC0E4 , #EAECC6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
- 
+  position:relative;
+  background: #ff4b1f; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #ff4b1f , #ff9068); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #ff4b1f , #ff9068); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 //END OF BACKGROUND
 
@@ -57,7 +56,6 @@ body {
 .navbar-default {
   background-color: #23bae5;
   border-color: #23bae5;
-  margin-bottom: 0px;
 }
 .navbar-default .navbar-brand {
   color: #ffffff;
