@@ -1,5 +1,5 @@
 class OfferteMailer < ActionMailer::Base
-  default to: 'jelte.cruz@gmail.com'
+  default to: 'nl.renovatie@gmail.com'
   def offerte_email(gender, initials, lastname, adres, zipcode, city, telnum, email, subject, message)
     @gender = gender
     @initials = initials

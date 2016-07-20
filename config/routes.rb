@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   root 'pages#home'
   get '/overons' => 'pages#overons'
-  get '/offerte' => 'pages#offerte'
   get '/projecten' => 'pages#projecten'
   resources :contacts
   resources :offertes

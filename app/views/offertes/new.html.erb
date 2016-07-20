@@ -1,52 +1,86 @@
 <div class="row">
-  <div class="col-md-4 col-md-offset-4">
-    <div class="well">
-      <%= form_for @offerte do |f| %>
-        <div class="form-group">
-          <%= f.label :'Aanhef' %><br />
-          <%= f.label :gender, "Man", :value => 'male' %>
-          <%= f.radio_button :gender, 'male', :checked => true %>
-          <%= f.label :gender, "Vrouw", :value => 'female' %>
-          <%= f.radio_button :gender, 'female' %>
-        </div>
-        <div class="form-group">
-          <%= f.label :'Voorletter(s)' %>
-          <%= f.text_field :initials, class: 'form-control' %>
-        </div>
-        <div class="form-group">
-          <%= f.label :'Achternaam' %>
-          <%= f.text_field :lastname, class: 'form-control' %>
-        </div>
-        <div class="form-group">
-          <%= f.label :'Adres' %>
-          <%= f.text_field :adres, class: 'form-control' %>
-        </div>
-        <div class="form-group">
-          <%= f.label :'Postcode' %>
-          <%= f.text_field :zipcode, class: 'form-control' %>
-        </div>
-        <div class="form-group">
-          <%= f.label :'Woonplaats' %>
-          <%= f.text_field :city, class: 'form-control' %>
-        </div>
-        <div class="form-group">
-          <%= f.label :'Telefoonnummer' %>
-          <%= f.text_field :telnum, class: 'form-control' %>
-        </div>
-        <div class="form-group">
-          <%= f.label :'Emailadres' %>
-          <%= f.text_field :email, class: 'form-control' %>
-        </div>
-        <div class="form-group">
-          <%= f.label :'Onderwerp' %>
-          <%= f.text_field :subject, class: 'form-control' %>
-        </div>
-        <div class="form-group">
-          <%= f.label :'Bericht' %>
-          <%= f.text_area :message, class: 'form-control textbox' %>
-        </div>        
-        <%= f.submit 'Vraag offerte aan!', class: 'btn btn-default' %>
-      <% end %>
+  <div class="hidden-xs col-sm 2 col-md-2 col-lg-2 text-center">
+    <p>Placement Holder</p>
+  </div>
+  <div class="panel panel-primary col-sm-8 col-md-8 col-lg-8">
+    <div class="panel-heading container-fluid text-left">
+      <h2>Offerte Aanvraag</h2>
     </div>
+    <div class="panel-body text-left">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In finibus mauris a accumsan ultricies. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras rutrum felis iaculis, viverra eros quis, eleifend ante. Aenean facilisis lobortis rhoncus. Cras rhoncus dignissim magna, eget pretium odio pretium et. Fusce fermentum, erat et dignissim dictum, nibh ligula blandit enim, a pretium mi ligula pellentesque justo. Vestibulum ut nibh sit amet elit elementum rhoncus. Praesent nec risus nunc. In tincidunt diam sed est iaculis, sit amet porttitor ipsum sollicitudin. Ut a aliquam mauris, ut laoreet ex. Aenean sed augue dolor. Curabitur sit amet purus at sem suscipit scelerisque. Phasellus maximus ultrices orci aliquam egestas. Nam vitae ipsum non erat sollicitudin rhoncus sit amet eget mauris. Fusce orci nibh, dignissim auctor tristique non, tempus eget lacus. Cras at augue non erat facilisis bibendum.
+        Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam viverra a orci maximus placerat. Quisque laoreet pellentesque metus at lacinia. Nam ornare placerat lorem eget pellentesque. Vestibulum aliquet volutpat leo, non commodo enim rhoncus nec. Nam euismod sapien vitae dictum feugiat. Maecenas efficitur, sapien ut porta condimentum, augue massa egestas eros, ut imperdiet odio dolor non dolor. Nunc malesuada ex id maximus cursus. Proin tempus ipsum ut ipsum bibendum, non fermentum odio pretium. Pellentesque vitae lectus et mi eleifend fermentum. In tempor aliquet est, eget vulputate lacus vestibulum sit amet. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In finibus mauris a accumsan ultricies. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras rutrum felis iaculis, viverra eros quis, eleifend ante. Aenean facilisis lobortis rhoncus. Cras rhoncus dignissim magna, eget pretium odio pretium et. Fusce fermentum, erat et dignissim dictum, nibh ligula blandit enim, a pretium mi ligula pellentesque justo. Vestibulum ut nibh sit amet elit elementum rhoncus. Praesent nec risus nunc. In tincidunt diam sed est iaculis, sit amet porttitor ipsum sollicitudin. Ut a aliquam mauris, ut laoreet ex. Aenean sed augue dolor. Curabitur sit amet purus at sem suscipit scelerisque. Phasellus maximus ultrices orci aliquam egestas. Nam vitae ipsum non erat sollicitudin rhoncus sit amet eget mauris. Fusce orci nibh, dignissim auctor tristique non, tempus eget lacus. Cras at augue non erat facilisis bibendum.
+      </p>
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Vraag hier uw offerte aan</button>
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Aanvraagformulier Offerte</h4>
+            </div>
+            <div class="modal-body">
+              <div class="well">
+                <%= form_for @offerte do |f| %>
+                  <div class="form-group">
+                    <%= f.label :'Aanhef' %><br>
+                    <%= f.label :gender, "Meneer", :value => 'male' %>
+                    <%= f.radio_button :gender, 'male', :checked => true %>
+                    <%= f.label :gender, "Mevrouw", :value => 'female' %>
+                    <%= f.radio_button :gender, 'female' %>
+                  </div>
+                  <div class="form-group">
+                    <%= f.label :'Voorletter(s)' %>
+                    <%= f.text_field :initials, class: 'form-control' %>
+                  </div>
+                  <div class="form-group">
+                    <%= f.label :'Achternaam' %>
+                    <%= f.text_field :lastname, class: 'form-control' %>
+                  </div>
+                  <div class="form-group">
+                    <%= f.label :'Adres' %>
+                    <%= f.text_field :adres, class: 'form-control' %>
+                  </div>
+                  <div class="form-group">
+                    <%= f.label :'Postcode' %>
+                    <%= f.text_field :zipcode, class: 'form-control' %>
+                  </div>
+                  <div class="form-group">
+                    <%= f.label :'Woonplaats' %>
+                    <%= f.text_field :city, class: 'form-control' %>
+                  </div>
+                  <div class="form-group">
+                    <%= f.label :'Telefoonnummer' %>
+                    <%= f.text_field :telnum, class: 'form-control' %>
+                  </div>
+                  <div class="form-group">
+                    <%= f.label :'Emailadres' %>
+                    <%= f.text_field :email, class: 'form-control' %>
+                  </div>
+                  <div class="form-group">
+                    <%= f.label :'Onderwerp' %>
+                    <%= f.text_field :subject, class: 'form-control' %>
+                  </div>
+                  <div class="form-group">
+                    <%= f.label :'Bericht' %>
+                    <%= f.text_area :message, class: 'form-control textbox' %>
+                  </div>        
+              </div>
+            </div>
+            <div class="modal-footer">
+                <%= f.submit 'Bevestig Aanvraag', class: 'btn btn-success' do %>
+                  <%= "data-dismiss='modal'".html_safe %>
+                <% end %>
+              <% end %>
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Annuleren</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hidden-xs col-sm-2 col-md-2 col-lg-2 text-center">
+    <p>Placement Holder</p>
   </div>
 </div>
