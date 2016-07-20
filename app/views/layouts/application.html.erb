@@ -17,33 +17,6 @@
   </div>
 </div>
 
-<% if (request.original_fullpath == '/') then %>
-  <script>
-  $(document).ready(function(){
-    $(".rootbutton").css({'color': '#337ab7', 'background-color': 'white'});
-  });</script>
-<% elsif (request.original_fullpath == '/overons') then %>
-  <script>
-  $(document).ready(function(){
-    $(".overonsbutton").css({'color': '#337ab7', 'background-color': 'white'});
-  });</script>
-<% elsif (request.original_fullpath == '/projecten') then %>
-  <script>
-  $(document).ready(function(){
-    $(".projectenbutton").css({'color': '#337ab7', 'background-color': 'white'});
-  });</script>
-<% elsif (request.original_fullpath == '/offertes/new') then %>
-  <script>
-  $(document).ready(function(){
-    $(".offertebutton").css({'color': '#337ab7', 'background-color': 'white'});
-  });</script>
-<% elsif (request.original_fullpath == '/contacts/new') then %>
-  <script>
-  $(document).ready(function(){
-    $(".contactbutton").css({'color': '#337ab7', 'background-color': 'white'});
-  });</script>
-<% end %>
-  
 <nav class="navbar navbar-default navbar-static-top" role="navigation" data-spy="affix" data-offset-top="200">
   <div class='container-fluid'>
     <div class="navbar-header">
