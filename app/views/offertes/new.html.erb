@@ -18,7 +18,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">Aanvraagformulier Offerte</h4>
+              <h4 class="modal-title">Offerte-aanvraagformulier</h4>
             </div>
             <div class="modal-body">
               <div class="well">
@@ -44,7 +44,7 @@
                   </div>
                   <div class="form-group">
                     <%= f.label :'Postcode' %>
-                    <%= f.text_field :zipcode, class: 'form-control' %>
+                    <%= f.text_field :zipcode, class: 'form-control', placeholder: '1234AB' %>
                   </div>
                   <div class="form-group">
                     <%= f.label :'Woonplaats' %>
@@ -52,11 +52,11 @@
                   </div>
                   <div class="form-group">
                     <%= f.label :'Telefoonnummer' %>
-                    <%= f.text_field :telnum, class: 'form-control' %>
+                    <%= f.text_field :telnum, class: 'form-control', placeholder: '0612345678' %>
                   </div>
                   <div class="form-group">
                     <%= f.label :'Emailadres' %>
-                    <%= f.text_field :email, class: 'form-control' %>
+                    <%= f.text_field :email, class: 'form-control', placeholder: 'jouwnaam@voorbeeld.nl'  %>
                   </div>
                   <div class="form-group">
                     <%= f.label :'Onderwerp' %>
@@ -66,14 +66,12 @@
                     <%= f.label :'Bericht' %>
                     <%= f.text_area :message, class: 'form-control textbox' %>
                   </div>        
-              </div>
-            </div>
-            <div class="modal-footer">
+                </div>
                 <%= f.submit 'Bevestig Aanvraag', class: 'btn btn-success' do %>
                   <%= "data-dismiss='modal'".html_safe %>
                 <% end %>
+                <button type="button" class="btn btn-danger pull-right" data-dismiss="modal">Annuleren</button>
               <% end %>
-              <button type="button" class="btn btn-danger" data-dismiss="modal">Annuleren</button>
             </div>
           </div>
         </div>

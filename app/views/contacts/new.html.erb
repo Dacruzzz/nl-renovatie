@@ -35,14 +35,12 @@
                     <%= f.label :'Uw bericht' %>
                     <%= f.text_area :comments, class: 'form-control textbox' %>
                   </div>
-              </div>
-            </div>
-            <div class="modal-footer">
+                </div>
                 <%= f.submit 'Versturen', class: 'btn btn-success' do %>
                   <%= "data-dismiss='modal'".html_safe %>
                 <% end %>
+                <button type="button" class="btn btn-danger pull-right" data-dismiss="modal" >Annuleren</button>
               <% end %>
-              <button type="button" class="btn btn-danger" data-dismiss="modal">Annuleren</button>
             </div>
           </div>
         </div>
