@@ -18,3 +18,10 @@ if (screen.width >= 780){
         }
     });
 }
+
+if (screen.width >= 1400){
+    $(document).ready(function(){
+        var setxlh = screen.height*0.9;
+        $(".panel-body").css({'max-height':setxlh})
+    });
+}
