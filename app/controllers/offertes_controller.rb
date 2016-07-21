@@ -4,7 +4,7 @@ class OffertesController < ApplicationController
       @offerte = Offerte.new
   end
   
-  def create
+    def create
         @offerte = Offerte.new(offerte_params)
         if @offerte.save
             gender = params[:offerte][:gender]
@@ -22,7 +22,7 @@ class OffertesController < ApplicationController
             redirect_to new_offerte_path
         else
             flash[:danger] = "Er heeft zich een fout voorgedaan, heeft u alle velden correct ingevuld?"
-            redirect_to new_offerte_path
+            render new_offerte_path
         end
     end
   

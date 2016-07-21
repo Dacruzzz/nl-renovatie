@@ -32,15 +32,15 @@
                   </div>
                   <div class="form-group">
                     <%= f.label :'Voorletter(s)' %>
-                    <%= f.text_field :initials, class: 'form-control' %>
+                    <%= f.text_field :initials, class: 'form-control', placeholder: 'Voorletters' %>
                   </div>
                   <div class="form-group">
                     <%= f.label :'Achternaam' %>
-                    <%= f.text_field :lastname, class: 'form-control' %>
+                    <%= f.text_field :lastname, class: 'form-control', placeholder: 'Achternaam' %>
                   </div>
                   <div class="form-group">
                     <%= f.label :'Adres' %>
-                    <%= f.text_field :adres, class: 'form-control' %>
+                    <%= f.text_field :adres, class: 'form-control', placeholder: 'Straat + huisnummer' %>
                   </div>
                   <div class="form-group">
                     <%= f.label :'Postcode' %>
@@ -48,7 +48,7 @@
                   </div>
                   <div class="form-group">
                     <%= f.label :'Woonplaats' %>
-                    <%= f.text_field :city, class: 'form-control' %>
+                    <%= f.text_field :city, class: 'form-control', placeholder: 'Woonplaats' %>
                   </div>
                   <div class="form-group">
                     <%= f.label :'Telefoonnummer' %>
@@ -56,15 +56,15 @@
                   </div>
                   <div class="form-group">
                     <%= f.label :'Emailadres' %>
-                    <%= f.text_field :email, class: 'form-control', placeholder: 'jouwnaam@voorbeeld.nl'  %>
+                    <%= f.text_field :email, class: 'form-control', placeholder: 'jouwadres@voorbeeld.nl' %>
                   </div>
                   <div class="form-group">
                     <%= f.label :'Onderwerp' %>
-                    <%= f.text_field :subject, class: 'form-control' %>
+                    <%= f.text_field :subject, class: 'form-control', placeholder: 'Onderwerp' %>
                   </div>
                   <div class="form-group">
                     <%= f.label :'Bericht' %>
-                    <%= f.text_area :message, class: 'form-control textbox' %>
+                    <%= f.text_area :message, class: 'form-control textbox', placeholder: 'Wees zo specifiek als mogelijk voor een perfect aangemeten offerte' %>
                   </div>        
                 </div>
                 <%= f.submit 'Bevestig Aanvraag', class: 'btn btn-success' do %>
