@@ -4,27 +4,28 @@
   </head>
   <body>
     <div>
-        Deze offerte aanvraag is verstuurd vanaf LN-Renoveren.nl
-        Adresgegevens aanvrager:
+        Deze offerte aanvraag is verstuurd vanaf LN-Renoveren.nl<br>
+        Adresgegevens aanvrager:<br>
         <% if @gender == 'male' %>
             Meneer <%= "#{ @initials }, #{ @lastname }" %>
         <% else %>
             Mevrouw <%= "#{ @initials }, #{ @lastname }" %>
-        <% end %>
-        <%= @adres %>
-        <%= @zipcode %> <%= @city %>
-    </div>
-    <div>Contactgegevens:
-        <%= @telnum %>
-        <%= @email %>
-    </div>
+        <% end %><br>
+        <%= @adres %><br>
+        <%= @zipcode %> <%= @city %><br>
+    </div><br>
     <div>
-        Onderwerp:
-        <%= @subject %>
-    </div>
+        Contactgegevens:<br>
+        <%= @telnum %><br>
+        <%= @email %><br>
+    </div><br>
     <div>
-        Aanvraag:
-        <%= @message %>
+        Onderwerp:<br>
+        <%= @subject %><br>
+    </div><br>
+    <div>
+        Aanvraag:<br>
+        <%= @message %><br>
     </div>
   </body>
 </html>
