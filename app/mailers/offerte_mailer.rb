@@ -12,6 +12,6 @@ class OfferteMailer < ActionMailer::Base
     @subject = subject
     @message = message
     attachments["#{file.original_filename}"] = File.read(file.path)
-    mail(from: email, subject: 'Offerte Aanvrag')
+    mail(from: email, subject: 'Offerte Aanvraag')
   end
 end
