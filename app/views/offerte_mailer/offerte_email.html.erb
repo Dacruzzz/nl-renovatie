@@ -3,25 +3,28 @@
   <head>
   </head>
   <body>
-    <p>Deze offerte aanvraag is verstuurd vanaf NL-renovatie.nl</p><br>
-    <p>Gegevens afzender:</p><br>
-    <p>Adresgegevens:</p>
-    <p>
+    <div>
+        Deze offerte aanvraag is verstuurd vanaf LN-Renoveren.nl
+        Adresgegevens aanvrager:
         <% if @gender == 'male' %>
             Meneer <%= "#{ @initials }, #{ @lastname }" %>
         <% else %>
             Mevrouw <%= "#{ @initials }, #{ @lastname }" %>
         <% end %>
-    </p>
-    <p><%= @adres %></p>
-    <p><%= @zipcode %></p>
-    <p><%= @city %></p><br>
-    <p>Contactgegevens:</p>
-    <p><%= @telnum %></p>
-    <p><%= @email %></p><br>
-    <p>Onderwerp:</p>
-    <p><%= @subject %></p>
-    <p>Bericht:</p>
-    <p><%= @message %></p>
+        <%= @adres %>
+        <%= @zipcode %> <%= @city %>
+    </div>
+    <div>Contactgegevens:
+        <%= @telnum %>
+        <%= @email %>
+    </div>
+    <div>
+        Onderwerp:
+        <%= @subject %>
+    </div>
+    <div>
+        Aanvraag:
+        <%= @message %>
+    </div>
   </body>
 </html>
