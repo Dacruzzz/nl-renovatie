@@ -17,8 +17,9 @@ class OffertesController < ApplicationController
             email = params[:offerte][:email]
             subject = params[:offerte][:subject] 
             message = params[:offerte][:message]
-            OfferteMailer.offerte_email(gender, initials, lastname, adres, zipcode, city, telnum, email, subject, message).deliver
-            flash[:success] = "Offerte-aanvraag verstuurd, u krijgt zo spoedig mogelijk reactie!"
+            file = params[:offerte][:file]
+            OfferteMailer.offerte_email(gender, initials, lastname, adres, zipcode, city, telnum, email, subject, message, file).deliver
+            flash[:success] = "Bedankt voor uw aanvraag, u krijgt zo spoedig mogelijk reactie!"
             redirect_to new_offerte_path
         else
             flash[:danger] = "Er heeft zich een fout voorgedaan, heeft u alle velden correct ingevuld?"
