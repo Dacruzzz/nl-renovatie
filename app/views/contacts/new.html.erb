@@ -1,3 +1,10 @@
+<% if @contact.errors.any? %>
+  <script type="text/javascript">
+    $(window).load(function(){
+      $('#myModal').modal('show');
+    });
+  </script>
+<% end %>
 <div class="row">
   <div class="hidden-xs col-sm-2 col-md-2 col-lg-2 text-center">
     <p>Placement Holder</p>
@@ -22,18 +29,26 @@
             </div>
             <div class="modal-body">
               <div class="well">
+                <% if @contact.errors.any? %>
+                  <ul>
+                    <% @contact.errors.full_messages.each do |msg| %>
+                      <li><%= msg %></li>
+                    <% end %>
+                  </ul>
+                <% end %>
+                <p class="text-right">Alle velden met een * zijn verplicht</p>
                 <%= form_for @contact do |f| %>
                   <div class="form-group">
-                    <%= f.label :'Naam' %>
+                    <%= f.label :'Naam*' %>
                     <%= f.text_field :name, class: 'form-control', placeholder: 'Naam' %>
                   </div>
                   <div class="form-group">
-                    <%= f.label :'Uw e-mailadres' %>
+                    <%= f.label :'Uw e-mailadres*' %>
                     <%= f.email_field :email, class: 'form-control', placeholder: 'jouwadres@voorbeeld.nl' %>
                   </div>
                   <div class="form-group">
-                    <%= f.label :'Uw bericht' %>
-                    <%= f.text_area :comments, class: 'form-control textbox' %>
+                    <%= f.label :'Uw bericht*' %>
+                    <%= f.text_area :comments, class: 'form-control textbox', placeholder: 'Uw bericht' %>
                   </div>
                 </div>
                 <%= f.submit 'Versturen', class: 'btn btn-success' do %>

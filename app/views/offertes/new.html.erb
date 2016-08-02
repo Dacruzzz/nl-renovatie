@@ -1,3 +1,10 @@
+<% if @offerte.errors.any? %>
+  <script type="text/javascript">
+    $(window).load(function(){
+      $('#myModal').modal('show');
+    });
+  </script>
+<% end %>
 <div class="row">
   <div class="hidden-xs col-sm-2 col-md-2 col-lg-2 text-center">
     <p>Placement Holder</p>
@@ -22,52 +29,60 @@
             </div>
             <div class="modal-body">
               <div class="well">
+                <% if @offerte.errors.any? %>
+                  <ul>
+                    <% @offerte.errors.full_messages.each do |msg| %>
+                      <li><%= msg %></li>
+                    <% end %>
+                  </ul>
+                <% end %>
+                <p class="text-right">Alle velden met een * zijn verplicht</p>
                 <%= form_for @offerte, :html => { :multipart => true } do |f| %>
                   <div class="form-group">
-                    <%= f.label :'Aanhef' %><br>
+                    <%= f.label :'Aanhef*' %><br>
                     <%= f.label :gender, "Meneer", :value => 'male' %>
                     <%= f.radio_button :gender, 'male', :checked => true %>
                     <%= f.label :gender, "Mevrouw", :value => 'female' %>
                     <%= f.radio_button :gender, 'female' %>
                   </div>
                   <div class="form-group">
-                    <%= f.label :'Voorletter(s)' %>
+                    <%= f.label :'Voorletter(s)*' %>
                     <%= f.text_field :initials, class: 'form-control', placeholder: 'Voorletters' %>
                   </div>
                   <div class="form-group">
-                    <%= f.label :'Achternaam' %>
+                    <%= f.label :'Achternaam*' %>
                     <%= f.text_field :lastname, class: 'form-control', placeholder: 'Achternaam' %>
                   </div>
                   <div class="form-group">
-                    <%= f.label :'Adres' %>
+                    <%= f.label :'Adres*' %>
                     <%= f.text_field :adres, class: 'form-control', placeholder: 'Straat + huisnummer' %>
                   </div>
                   <div class="form-group">
-                    <%= f.label :'Postcode' %>
+                    <%= f.label :'Postcode*' %>
                     <%= f.text_field :zipcode, class: 'form-control', placeholder: '1234AB' %>
                   </div>
                   <div class="form-group">
-                    <%= f.label :'Woonplaats' %>
+                    <%= f.label :'Woonplaats*' %>
                     <%= f.text_field :city, class: 'form-control', placeholder: 'Woonplaats' %>
                   </div>
                   <div class="form-group">
-                    <%= f.label :'Telefoonnummer' %>
+                    <%= f.label :'Telefoonnummer*' %>
                     <%= f.text_field :telnum, class: 'form-control', placeholder: '0612345678' %>
                   </div>
                   <div class="form-group">
-                    <%= f.label :'Emailadres' %>
+                    <%= f.label :'Emailadres*' %>
                     <%= f.text_field :email, class: 'form-control', placeholder: 'jouwadres@voorbeeld.nl' %>
                   </div>
                   <div class="form-group">
-                    <%= f.label :'Onderwerp' %>
+                    <%= f.label :'Onderwerp*' %>
                     <%= f.text_field :subject, class: 'form-control', placeholder: 'Onderwerp' %>
                   </div>
                   <div class="form-group">
-                    <%= f.label :'Bericht' %>
-                    <%= f.text_area :message, class: 'form-control textbox', placeholder: 'Wees zo specifiek mogelijk voor een perfect aangemeten offerte' %>
+                    <%= f.label :'Bericht*' %>
+                    <%= f.text_area :message, class: 'form-control textbox', placeholder: 'Wees zo specifiek mogelijk voor een zo nauwkeurig mogelijk aangemeten offerte' %>
                   </div>
                   <div>
-                    <%= f.label :'Afbeelding toevoegen' %>
+                    <%= f.label :'Afbeelding toevoegen (optioneel)' %>
                     <%= f.file_field :file, class: 'form-control' %>
                   </div>
                 </div>

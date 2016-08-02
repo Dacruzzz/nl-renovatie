@@ -8,6 +8,6 @@ class Offerte < ActiveRecord::Base
     validates :city, presence: true
     validates_numericality_of :telnum, :only_integer => true, presence: true
     validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, presence: true
-    validates :subject, presence: true
-    validates :message, presence: true
+    validates_length_of :subject, :minimum => 1, :maximum => 30, presence: true
+    validates_length_of :message, :minimum => 5, :maximum => 1000, presence: true
 end

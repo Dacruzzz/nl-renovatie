@@ -22,7 +22,6 @@ class OffertesController < ApplicationController
             flash[:success] = "Bedankt voor uw aanvraag, u krijgt zo spoedig mogelijk reactie!"
             redirect_to new_offerte_path
         else
-            flash[:danger] = "Er heeft zich een fout voorgedaan, heeft u alle velden correct ingevuld?"
             render new_offerte_path
         end
     end
