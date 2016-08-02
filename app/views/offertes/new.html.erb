@@ -83,7 +83,7 @@
                   </div>
                   <div>
                     <%= f.label :'Afbeelding toevoegen (optioneel)' %>
-                    <%= f.file_field :file, class: 'form-control' %>
+                    <%= f.file_field :file, onchange: "validateFiles(this);", data: { max_file_size: 5.megabytes }, class: 'form-control' %>
                   </div>
                 </div>
                 <%= f.submit 'Bevestig Aanvraag', class: 'btn btn-success' do %>
