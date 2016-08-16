@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   root 'pages#home'
   get '/overons' => 'pages#overons'
   get '/projecten' => 'pages#projecten'
+  get '/lnrenoverenfb', 
+      to: redirect('https://www.facebook.com/LN-Renoveren-1135736303153132/?fref=ts'), 
+      as: 'lnrenoverenlb'
   resources :contacts
   resources :offertes
   # The priority is based upon order of creation: first created -> highest priority.

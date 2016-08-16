@@ -33,7 +33,7 @@ if (screen.width >= 1400){
 //CLIENT SIDE FILE VALIDATION
 function validateFiles(inputFile) {
   var maxExceededMessage = "Dit bestand overschrijdt de maximum grootte van 5 mb";
-  var extErrorMessage = "Alleen afbeeldingen van het formaat: .jpg, .jpeg, .gif or .png zijn toegestaan";
+  var extErrorMessage = "Alleen afbeeldingen van het formaat; .jpg, .jpeg, .gif or .png zijn toegestaan";
   var allowedExtension = ["jpg", "jpeg", "gif", "png"];
 
   var extName;
@@ -55,4 +55,12 @@ function validateFiles(inputFile) {
     window.alert(extErrorMessage);
     $(inputFile).val('');
   };
-}//END OF CLIENT SIDE VALIDATION
+}
+//END OF CLIENT SIDE FILE VALIDATION
+
+//AUTO SET HEIGHT OF FB-PLUGIN
+$(document).ready(function() {
+    var setfbheight = $('.panel').height() + 1;
+    $('.fb-page').attr('data-height', setfbheight);
+});
+//END OF FB-PLUGING HEIGHT

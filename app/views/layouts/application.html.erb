@@ -9,6 +9,15 @@
 </head>
 <body data-spy="scroll" data-target="nav" data-offset="50">
   
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/nl_NL/sdk.js#xfbml=1&version=v2.7";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+  
 <div class="container-fluid header">
   <div class="row">
     <div class="img-responsive">
@@ -66,11 +75,43 @@
   <% flash.each do |key, value| %>
     <%= content_tag :div, value, class: "alert alert-#{key}" %>
   <% end %>
-  <%= yield %>
+  <div class="row">
+    <div class="hidden-xs col-sm-2 col-md-2 col-lg-2 text-center">
+      <p>Placement Holder</p>
+    </div>
+    <div class="col-sm-8 col-md-8 col-lg-8 panel panel-primary">
+      <%= yield %>
+    </div>
+    <div class="hidden-xs col-sm-2 col-md-2 col-lg-2 text-center">
+      <div class="fb-page"
+        data-href="https://www.facebook.com/LN-Renoveren-1135736303153132/?fref=ts"
+        data-tabs="timeline"
+        data-small-header="true"
+        data-adapt-container-width="true"
+        data-hide-cover="false"
+        data-show-facepile="true">
+        <blockquote cite="https://www.facebook.com/LN-Renoveren-1135736303153132/?fref=ts"
+          class="fb-xfbml-parse-ignore">
+          <a href="https://www.facebook.com/LN-Renoveren-1135736303153132/?fref=ts">LN Renoveren</a>
+        </blockquote>
+      </div>
+    </div>
+  </div>
 </div>
 
 <footer class="container-fluid text-center">
-  <p>LN-Renoveren.nl</p>
+  <div class="hidden-xs hidden-sm col-md-3 col-lg-3">
+  
+  </div>
+  <div class="hidden-xs hidden-sm col-md-6 col-lg-6">
+    <p>(06) 403 511 38 | renoveren.ln@gmail.com | www.LN-Renoveren.nl</p>
+  </div>
+  <!--<div class="hidden-md hidden-lg col-xs-12 col-sm-12" style="padding-bottom:0em;">
+    <p>(06) 403 511 38<br>renoveren.ln@gmail.com<br>www.LN-Renoveren.nl</p>
+  </div>-->
+  <div class="hidden-xs hidden-sm col-md-3 col-lg-3">
+    
+  </div>
 </footer>
 
 </body>
