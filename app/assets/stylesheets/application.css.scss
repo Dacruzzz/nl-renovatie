@@ -137,6 +137,43 @@ button.navbar-toggle.collapsed {
 }
 // END OF NAVBAR ADJUSTMENT
 
+// SECTIONS
+#sectionhome {
+  padding-top:50px;
+  height:500px;
+  color: #fff;
+  background-color: #1E88E5;
+}
+
+#sectionaboutus {
+  padding-top:50px;
+  height:500px;
+  color: #fff;
+  background-color: #673ab7;
+}
+
+#sectionprojects {
+  padding-top:50px;
+  height:500px;
+  color: #fff;
+  background-color: #ff9800;
+}
+
+#sectionofferte {
+  padding-top:50px;
+  height:500px;
+  color: #fff;
+  background-color: #00bcd4;
+}
+
+#sectioncontact {
+  padding-top:50px;
+  height:500px;
+  color: #fff;
+  background-color: #009688;
+}
+// END OF SECTIONS
+
 // TEXTBOX FORM CONTROL
 .textbox {
   resize:none;

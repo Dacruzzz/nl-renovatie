@@ -57,10 +57,3 @@ function validateFiles(inputFile) {
   };
 }
 //END OF CLIENT SIDE FILE VALIDATION
-
-//AUTO SET HEIGHT OF FB-PLUGIN
-$(document).ready(function() {
-    var setfbheight = $('.panel').height() + 1;
-    $('.fb-page').attr('data-height', setfbheight);
-});
-//END OF FB-PLUGING HEIGHT
